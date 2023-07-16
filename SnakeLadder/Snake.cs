@@ -10,6 +10,7 @@ namespace SnakeLadder
     {
         public static void Ladder()
         {
+
             int dice;
             int option;
             int position = 0;
@@ -29,7 +30,7 @@ namespace SnakeLadder
                 {
                     Console.WriteLine("option is No play");
                     position = position + 0;
-                    Console.WriteLine("position: " + position);
+                    Console.WriteLine("position : " + position);
                 }
                 else if (option == 1)
                 {
@@ -39,13 +40,24 @@ namespace SnakeLadder
                     {
                         position = 0;
                     }
-                    Console.WriteLine("position: " + position);
+                    Console.WriteLine("position : " + position);
                 }
                 else
                 {
                     Console.WriteLine("option is ladder");
                     position = position + dice;
-                    Console.WriteLine("position: " + position);
+
+                    if (position > 100)
+                    {
+                        position = position - dice;
+
+                    }
+                    else if (position == 100)
+                    {
+                        Console.WriteLine("player won");
+                    }
+                    Console.WriteLine("position : " + position);
+
                 }
             }
         }
