@@ -11,9 +11,11 @@ namespace SnakeLadder
         public static void Ladder()
         {
 
+
             int dice;
             int option;
             int position = 0;
+            int count = 0;
             Console.WriteLine("Snake and ladder game with single player");
             Console.WriteLine("player is at 0 position");
 
@@ -31,6 +33,7 @@ namespace SnakeLadder
                     Console.WriteLine("option is No play");
                     position = position + 0;
                     Console.WriteLine("position : " + position);
+                    count = count + 1;
                 }
                 else if (option == 1)
                 {
@@ -41,6 +44,7 @@ namespace SnakeLadder
                         position = 0;
                     }
                     Console.WriteLine("position : " + position);
+                    count = count + 1;
                 }
                 else
                 {
@@ -57,9 +61,11 @@ namespace SnakeLadder
                         Console.WriteLine("player won");
                     }
                     Console.WriteLine("position : " + position);
+                    count = count + 1;
 
                 }
             }
+            Console.WriteLine(" {0} times dice was rolled to win the game ", count);
         }
     }
 }
